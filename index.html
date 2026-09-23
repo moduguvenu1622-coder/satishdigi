@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P. Satish Chandra | Digital Marketing Manager & Flagship Event Conductor | Myron Mall</title>
+  <meta name="description" content="Official 3D Executive Portfolio of P. Satish Chandra — Digital Marketing Manager, Performance Marketer, Brand Growth Strategist, and Manager & Event Host at Myron Mall. Influenced ₹900 Cr+ revenue across ₹2,500 Cr projects." />
+  <meta name="keywords" content="P Satish Chandra, Myron Mall Manager, Myron Mall Event Host, Digital Marketing Manager, Performance Marketer, Real Estate Marketing, Meta Ads, Google Ads, OTT Ads, Event Conductor" />
+  <meta name="author" content="P. Satish Chandra" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="P. Satish Chandra — Manager at Myron Mall & Event Conductor" />
+  <meta property="og:description" content="Conducting Flagship Events & Driving ₹900 Cr+ Revenue via High-Performance AI & Digital Marketing." />
+  <meta property="og:image" content="./assets/images/satish_real_portrait.png" />
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+  <!-- Google Fonts: Cinzel (Luxury Serif), Outfit (Modern Executive), Montserrat (Clean Tech) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 for Crisp Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Bespoke Luxury CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- External Libraries for 3D & Micro-Interactions -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Cinematic Architectural Stage Backdrop Layer -->
+  <div id="cinematic-bg-layer" aria-hidden="true">
+    <div class="cinematic-bg-image"></div>
+    <div class="cinematic-bg-overlay"></div>
+    <div class="cinematic-noise-overlay"></div>
+  </div>
+
+  <!-- Dynamic Cursor Light Spotlight -->
+  <div id="cursor-spotlight" aria-hidden="true"></div>
+
+  <!-- Three.js 3D WebGL Canvas Layer -->
+  <div id="webgl-canvas-container" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="header-nav" id="main-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" title="P. Satish Chandra Executive Portfolio">
+        <div class="brand-crest">SC</div>
+        <div class="brand-text">
+          <span class="brand-name">SATISH CHANDRA</span>
+          <span class="brand-title">Mall Manager & Event Host</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#events" class="nav-link">Event Stage</a></li>
+        <li><a href="#impact" class="nav-link">₹900Cr Impact</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#ecosystem" class="nav-link">Ecosystem</a></li>
+        <li><a href="#skills" class="nav-link">Skills & AI</a></li>
+        <li><a href="#calculator" class="nav-link">ROI Engine</a></li>
+        <li><a href="#contact" class="nav-link">Connect</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="sound-toggle-btn" id="sound-toggle" title="Toggle Tactile Sound FX" aria-label="Toggle Audio Feedback">
+          <i class="fa-solid fa-volume-xmark"></i>
+        </button>
+        <a href="#contact" class="btn btn-gold" style="padding: 10px 22px; font-size: 0.88rem;">
+          <i class="fa-solid fa-microphone-lines"></i> Host Event
+        </a>
+        <button class="mobile-toggle" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION: 3D EXECUTIVE STAGE
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-strip">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Manager at Myron Mall & Lead Event Host</span>
+          </div>
+          <div class="hero-badge hero-badge-cyan">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>₹900 Cr+ Influenced</span>
+          </div>
+        </div>
+
+        <h1 class="hero-headline">
+          P. SATISH <br>
+          <span class="text-gradient-gold">CHANDRA</span>
+        </h1>
+
+        <div class="hero-role-wrapper">
+          <span>&gt;</span>
+          <span id="typing-text" class="text-gradient-cyan"></span>
+          <span class="typing-cursor"></span>
+        </div>
+
+        <p class="hero-bio">
+          Performance-driven <strong>Digital Marketing Manager & Growth Strategist</strong> with <strong>6+ years of mastery</strong> scaling multi-lakh advertising budgets into massive multi-crore revenue. Commanded the flagship <strong>₹2,500 Cr Myron Mall</strong> grand stage launches, VIP galas, and integrated AI-driven omnichannel marketing ecosystems.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#events" class="btn btn-gold">
+            <i class="fa-solid fa-clapperboard"></i> Conduct The Event 🎬
+          </a>
+          <a href="#ecosystem" class="btn btn-glass">
+            <i class="fa-solid fa-globe"></i> View Brand Ecosystem
+          </a>
+          <a href="https://wa.me/918464960327?text=Hello%20Satish,%20I%20am%20interested%20in%20discussing%20event%20hosting%20and%20performance%20marketing." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Direct WhatsApp
+          </a>
+        </div>
+
+        <div style="display:flex; align-items:center; flex-wrap:wrap; gap:20px; font-family:var(--font-tech); font-size:0.88rem; color:var(--text-secondary);">
+          <span><i class="fa-solid fa-location-dot" style="color:var(--gold-primary);"></i> India (Open to Relocate)</span>
+          <span><i class="fa-solid fa-phone" style="color:var(--cyan-primary);"></i> +91 8464960327</span>
+          <span><i class="fa-solid fa-envelope" style="color:var(--violet-primary);"></i> Peyyalasatish3@gmail.com</span>
+        </div>
+      </div>
+
+      <!-- 3D Tilt Executive Card with Myron Mall Stage Emblem Halo -->
+      <div class="hero-visual">
+        <!-- Circular illuminated ring matching Myron Mall emblem in his photo -->
+        <div class="portrait-emblem-halo" aria-hidden="true"></div>
+
+        <div class="card-3d-wrapper">
+          <div class="executive-card">
+            <div class="card-glare"></div>
+            <div class="holo-scan-strip"></div>
+            <div class="portrait-frame">
+              <img src="./assets/images/satish_real_portrait.png" alt="P. Satish Chandra — Manager at Myron Mall & Event Host" class="portrait-img" />
+              <div class="portrait-overlay-gradient"></div>
+              <div class="portrait-info-floating">
+                <div class="floating-name">P. Satish Chandra</div>
+                <div class="floating-designation">Manager & Lead Event Host · Myron Mall & Homes</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Milestone Badges -->
+          <div class="floating-badge badge-left">
+            <div class="badge-icon"><i class="fa-solid fa-crown"></i></div>
+            <div>
+              <div class="badge-value">₹2,500 Cr</div>
+              <div class="badge-label">Myron Mall Project</div>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-right">
+            <div class="badge-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+            <div>
+              <div class="badge-value">₹900 Cr+</div>
+              <div class="badge-label">Revenue in 2 Months</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       METRICS DASHBOARD STRIP
+       ========================================================================== -->
+  <section class="metrics-strip" id="impact">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="glass-panel metric-card">
+          <div class="metric-icon-wrap"><i class="fa-solid fa-coins"></i></div>
+          <div class="metric-number text-gradient-gold counter-val" data-target="900" data-prefix="₹" data-suffix="Cr+">₹0Cr+</div>
+          <div class="metric-title">Business Revenue Influenced</div>
+          <div class="metric-desc">Generated within 2 months of strategic omni-channel scaling</div>
+        </div>
+
+        <div class="glass-panel metric-card">
+          <div class="metric-icon-wrap" style="color:var(--cyan-primary); background:rgba(0, 229, 255, 0.1); border-color:rgba(0, 229, 255, 0.3);"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="metric-number text-gradient-cyan counter-val" data-target="2500" data-prefix="₹" data-suffix="Cr">₹0Cr</div>
+          <div class="metric-title">Myron Mall Flagship Scale</div>
+          <div class="metric-desc">End-to-end launch marketing, live hosting & high-intent acquisition</div>
+        </div>
+
+        <div class="glass-panel metric-card">
+          <div class="metric-icon-wrap" style="color:var(--violet-primary); background:rgba(168, 85, 247, 0.1); border-color:rgba(168, 85, 247, 0.3);"><i class="fa-solid fa-bullseye"></i></div>
+          <div class="metric-number text-gradient-accent counter-val" data-target="20" data-prefix="₹" data-suffix="L+">₹0L+</div>
+          <div class="metric-title">Monthly Ad Deployments</div>
+          <div class="metric-desc">Meta, Google, OTT, JioHotstar, Amazon Ads & Generative AI</div>
+        </div>
+
+        <div class="glass-panel metric-card">
+          <div class="metric-icon-wrap"><i class="fa-solid fa-award"></i></div>
+          <div class="metric-number text-gradient-gold counter-val" data-target="6" data-suffix="+ Yrs">0+ Yrs</div>
+          <div class="metric-title">Performance Leadership</div>
+          <div class="metric-desc">Across Real Estate, Mega Malls, Hospitality, Retail & Tourism</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED SPOTLIGHT: CONDUCT THE EVENT
+       ========================================================================== -->
+  <section class="events-section" id="events">
+    <div class="container">
+      <div class="text-center mx-auto">
+        <div class="section-tag"><i class="fa-solid fa-microphone-lines"></i> Stage Spotlight</div>
+        <h2 class="section-title">CONDUCT THE <span class="text-gradient-gold">EVENT</span></h2>
+        <p class="section-subtitle mx-auto">
+          As the <strong>Manager at Myron Mall</strong>, I host, direct, and conduct premiere flagship events—from multi-thousand guest grand launch galas to cultural expeditions and musical unveils.
+        </p>
+      </div>
+
+      <!-- Mega Event Banner: Myron Mall Grand Launch -->
+      <div class="events-hero-banner">
+        <div class="banner-img-wrap">
+          <img src="./assets/images/myron_mall_event.jpg" alt="Myron Mall Grand Launch Gala Stage" class="banner-img" />
+          <div class="banner-overlay">
+            <div class="banner-content">
+              <div class="banner-tag"><i class="fa-solid fa-fire"></i> Flagship Milestone · Live Conductor</div>
+              <h3 class="banner-title">Myron Mall Grand Launch Celebration Event</h3>
+              <p class="banner-lead">
+                Commanded the stage before thousands of dignitaries, celebrities, investors, and retail partners. Orchestrated live presentations, VIP introductions, and high-impact digital broadcasting for the ₹2,500 Cr premier lifestyle destination.
+              </p>
+              <div class="banner-actions">
+                <a href="https://www.instagram.com/reel/DcsVH9xB8wt/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="btn btn-gold" data-video-type="instagram" data-video-title="Myron Mall Grand Launch Event" data-video-desc="Live Stage Gala Host & Grand Launch Conductor at Myron Mall" data-video-src="https://www.instagram.com/reel/DcsVH9xB8wt/">
+                  <i class="fa-brands fa-instagram"></i> Watch Grand Launch Reel
+                </a>
+                <a href="#contact" class="btn btn-glass">
+                  <i class="fa-solid fa-calendar-check"></i> Book Me To Host Your Event
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Highlights & Reels Grid -->
+      <div class="events-grid">
+        <!-- 1. Myron Mall Grand Launch Reel -->
+        <div class="glass-panel event-card">
+          <div class="event-media-container">
+            <img src="./assets/images/myron_mall_event.jpg" alt="Myron Mall Grand Launch" class="event-thumbnail" />
+            <div class="event-card-overlay">
+              <span class="event-type-pill"><i class="fa-brands fa-instagram"></i> Official Reel</span>
+              <div class="play-trigger-center" data-video-type="instagram" data-video-title="Myron Mall Grand Launch Event" data-video-desc="Satish Chandra conducting the grand launch stage before thousands of guests." data-video-src="https://www.instagram.com/reel/DcsVH9xB8wt/">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="event-meta-badge"><i class="fa-solid fa-users"></i> Mega Launch</span>
+            </div>
+          </div>
+          <div class="event-body">
+            <h4 class="event-title">Myron Mall Grand Launch Event</h4>
+            <div class="event-venue"><i class="fa-solid fa-location-dot"></i> Myron Mall Main Arena</div>
+            <p class="event-desc">
+              Conducted the grand gala opening ceremony, VIP protocol, and high-energy audience interactions marking the historic opening of the landmark mall.
+            </p>
+            <div class="event-footer">
+              <span class="event-role-tag">Role: <strong>Event Host & Stage Lead</strong></span>
+              <a href="https://www.instagram.com/reel/DcsVH9xB8wt/" target="_blank" rel="noopener noreferrer" class="event-action-link" data-video-type="instagram" data-video-title="Myron Mall Grand Launch Event" data-video-desc="Grand launch event live coverage" data-video-src="https://www.instagram.com/reel/DcsVH9xB8wt/">
+                Watch Reel <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Myron Mall Logo Launch Reel -->
+        <div class="glass-panel event-card">
+          <div class="event-media-container">
+            <img src="./assets/images/myron_mall_exterior.jpg" alt="Myron Mall Logo Launch" class="event-thumbnail" />
+            <div class="event-card-overlay">
+              <span class="event-type-pill"><i class="fa-brands fa-instagram"></i> Brand Unveil</span>
+              <div class="play-trigger-center" data-video-type="instagram" data-video-title="Myron Mall Logo Launch Event" data-video-desc="Official Unveiling Ceremony of the Myron Mall Brand Identity & Logo." data-video-src="https://www.instagram.com/reel/DaMmjjhzBg-/">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="event-meta-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Identity Unveil</span>
+            </div>
+          </div>
+          <div class="event-body">
+            <h4 class="event-title">Myron Mall Logo Launch Event</h4>
+            <div class="event-venue"><i class="fa-solid fa-location-dot"></i> Grand Atrium Stage</div>
+            <p class="event-desc">
+              Unveiled the official brand logo of Myron Mall with theatrical illumination, keynote presentation on brand philosophy, and media reveal.
+            </p>
+            <div class="event-footer">
+              <span class="event-role-tag">Role: <strong>Stage Director & Anchor</strong></span>
+              <a href="https://www.instagram.com/reel/DaMmjjhzBg-/" target="_blank" rel="noopener noreferrer" class="event-action-link" data-video-type="instagram" data-video-title="Myron Mall Logo Launch Event" data-video-desc="Official Logo Unveil ceremony." data-video-src="https://www.instagram.com/reel/DaMmjjhzBg-/">
+                Watch Reel <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Myron Mall Music Launch Event (YouTube Embed) -->
+        <div class="glass-panel event-card">
+          <div class="event-media-container">
+            <img src="./assets/images/myron_mall_event.jpg" alt="Myron Mall Music Launch" class="event-thumbnail" />
+            <div class="event-card-overlay">
+              <span class="event-type-pill event-type-youtube"><i class="fa-brands fa-youtube"></i> YouTube Anthem</span>
+              <div class="play-trigger-center" data-video-type="youtube" data-video-title="Myron Mall Music Launch Event" data-video-desc="Official Musical Anthem & Symphony Launch Event for Myron Mall." data-video-src="https://www.youtube.com/embed/vvosybRLnDM" data-video-link="https://www.youtube.com/watch?v=vvosybRLnDM">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="event-meta-badge"><i class="fa-solid fa-music"></i> Anthem Release</span>
+            </div>
+          </div>
+          <div class="event-body">
+            <h4 class="event-title">Myron Mall Music Launch Event</h4>
+            <div class="event-venue"><i class="fa-solid fa-location-dot"></i> Live Concert & Broadcast</div>
+            <p class="event-desc">
+              Hosted the grand release of the Myron Mall brand anthem and original musical composition, coordinating stage performances and press coverage.
+            </p>
+            <div class="event-footer">
+              <span class="event-role-tag">Role: <strong>Anthem Host & Producer</strong></span>
+              <a href="https://www.youtube.com/watch?v=vvosybRLnDM" target="_blank" rel="noopener noreferrer" class="event-action-link" data-video-type="youtube" data-video-title="Myron Mall Music Launch Event" data-video-desc="Anthem Launch on YouTube" data-video-src="https://www.youtube.com/embed/vvosybRLnDM" data-video-link="https://www.youtube.com/watch?v=vvosybRLnDM">
+                Play Anthem <i class="fa-solid fa-play"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Gramayatri Village Tour Event 01 -->
+        <div class="glass-panel event-card">
+          <div class="event-media-container">
+            <img src="./assets/images/gramayatri_tour.jpg" alt="Gramayatri Village Tour Expedition 1" class="event-thumbnail" />
+            <div class="event-card-overlay">
+              <span class="event-type-pill event-type-tour"><i class="fa-solid fa-bus"></i> Cultural Expedition</span>
+              <div class="play-trigger-center" data-video-type="instagram" data-video-title="Gramayatri Village Tour Event (Expedition 01)" data-video-desc="Cultural Eco-Tourism Village Tour and Rural Heritage Festival organized by Gramayatri." data-video-src="https://www.instagram.com/reel/DUNg48piY4u/">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="event-meta-badge"><i class="fa-solid fa-map-pin"></i> Rural Tourism</span>
+            </div>
+          </div>
+          <div class="event-body">
+            <h4 class="event-title">Gramayatri Village Tour — Expedition 01</h4>
+            <div class="event-venue"><i class="fa-solid fa-location-dot"></i> Konaseema Rural Trails</div>
+            <p class="event-desc">
+              Organized and hosted an immersive rural heritage journey bringing urban travelers and families to experience traditional village culture, folk arts, and community celebrations.
+            </p>
+            <div class="event-footer">
+              <span class="event-role-tag">Role: <strong>Tour Conductor & Host</strong></span>
+              <a href="https://www.instagram.com/reel/DUNg48piY4u/" target="_blank" rel="noopener noreferrer" class="event-action-link" data-video-type="instagram" data-video-title="Gramayatri Village Tour (01)" data-video-desc="Gramayatri Village Tour Expedition 01" data-video-src="https://www.instagram.com/reel/DUNg48piY4u/">
+                Watch Tour 1 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Gramayatri Village Tour Event 02 -->
+        <div class="glass-panel event-card">
+          <div class="event-media-container">
+            <img src="./assets/images/gramayatri_tour.jpg" alt="Gramayatri Village Tour Expedition 2" class="event-thumbnail" />
+            <div class="event-card-overlay">
+              <span class="event-type-pill event-type-tour"><i class="fa-solid fa-compass"></i> Heritage Caravan</span>
+              <div class="play-trigger-center" data-video-type="instagram" data-video-title="Gramayatri Village Tour Event (Expedition 02)" data-video-desc="Vibrant village celebration, traditional arts, and community gathering hosted by Gramayatri." data-video-src="https://www.instagram.com/reel/DUfkefSiQfv/">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="event-meta-badge"><i class="fa-solid fa-sun"></i> Folk Festival</span>
+            </div>
+          </div>
+          <div class="event-body">
+            <h4 class="event-title">Gramayatri Village Tour — Expedition 02</h4>
+            <div class="event-venue"><i class="fa-solid fa-location-dot"></i> Heritage Village Circuit</div>
+            <p class="event-desc">
+              Led festive processions, cultural performances, and experiential farm tours, scaling rural hospitality and tourism awareness through high-engagement social reels.
+            </p>
+            <div class="event-footer">
+              <span class="event-role-tag">Role: <strong>Event Lead & Storyteller</strong></span>
+              <a href="https://www.instagram.com/reel/DUfkefSiQfv/" target="_blank" rel="noopener noreferrer" class="event-action-link" data-video-type="instagram" data-video-title="Gramayatri Village Tour (02)" data-video-desc="Gramayatri Village Tour Expedition 02" data-video-src="https://www.instagram.com/reel/DUfkefSiQfv/">
+                Watch Tour 2 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Architectural Centerpiece Card: Myron Mall Project -->
+        <div class="glass-panel event-card">
+          <div class="event-media-container">
+            <img src="./assets/images/myron_mall_exterior.jpg" alt="Myron Mall ₹2,500 Cr Landmark" class="event-thumbnail" />
+            <div class="event-card-overlay">
+              <span class="event-type-pill"><i class="fa-solid fa-gem"></i> ₹2,500 Cr Benchmark</span>
+              <span class="event-meta-badge"><i class="fa-solid fa-certificate"></i> Flagship Property</span>
+            </div>
+          </div>
+          <div class="event-body">
+            <h4 class="event-title">Myron Mall Management & Growth</h4>
+            <div class="event-venue"><i class="fa-solid fa-crown"></i> Prime Commercial Epicenter</div>
+            <p class="event-desc">
+              Managing end-to-end commercial positioning, leasing footfall generation, high-profile corporate events, and omnichannel footfall conversion strategies.
+            </p>
+            <div class="event-footer">
+              <span class="event-role-tag">Role: <strong>Manager & Growth Lead</strong></span>
+              <a href="https://myronmall.com/" target="_blank" rel="noopener noreferrer" class="event-action-link">
+                Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Host Skills Strip -->
+      <div class="host-skills-strip">
+        <h3 style="font-family:var(--font-heading); font-size:1.35rem; color:#fff; text-align:center;">
+          Executive Event Conductor & Host Capabilities
+        </h3>
+        <div class="host-skills-grid">
+          <div class="host-skill-item">
+            <div class="host-skill-icon"><i class="fa-solid fa-microphone"></i></div>
+            <div>
+              <div class="host-skill-name">Live Stage Hosting & Keynotes</div>
+              <div class="host-skill-desc">Dynamic stage presence, live audience engagement, and commanding public speaking.</div>
+            </div>
+          </div>
+          <div class="host-skill-item">
+            <div class="host-skill-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <div class="host-skill-name">VIP & Dignitary Protocol</div>
+              <div class="host-skill-desc">Seamless management of high-profile delegates, celebrities, and corporate leaders.</div>
+            </div>
+          </div>
+          <div class="host-skill-item">
+            <div class="host-skill-icon"><i class="fa-solid fa-video"></i></div>
+            <div>
+              <div class="host-skill-name">Multichannel Broadcasting</div>
+              <div class="host-skill-desc">Live streaming across YouTube, Instagram, and OTT platforms with real-time virality.</div>
+            </div>
+          </div>
+          <div class="host-skill-item">
+            <div class="host-skill-icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <div>
+              <div class="host-skill-name">Launch Event Monetization</div>
+              <div class="host-skill-desc">Connecting launch excitement directly into site visits, pre-bookings, and retail sales.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BRAND ECOSYSTEM & CLIENT SHOWCASE
+       ========================================================================== -->
+  <section class="ecosystem-section" id="ecosystem">
+    <div class="container">
+      <div class="text-center mx-auto">
+        <div class="section-tag"><i class="fa-solid fa-network-wired"></i> Digital Footprint</div>
+        <h2 class="section-title">THE BRAND <span class="text-gradient-gold">ECOSYSTEM</span></h2>
+        <p class="section-subtitle mx-auto">
+          Explore the network of premier corporate websites, high-engagement Instagram channels, and video hubs scaled under my performance leadership.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="eco-tabs-header">
+        <button class="eco-tab-btn active" data-filter="all"><i class="fa-solid fa-border-all"></i> All Portfolios (22)</button>
+        <button class="eco-tab-btn" data-filter="website"><i class="fa-solid fa-globe"></i> Official Websites (6)</button>
+        <button class="eco-tab-btn" data-filter="instagram"><i class="fa-brands fa-instagram"></i> Instagram Channels (12)</button>
+        <button class="eco-tab-btn" data-filter="youtube"><i class="fa-brands fa-youtube"></i> YouTube Channels (4)</button>
+      </div>
+
+      <!-- Quick Search Bar -->
+      <div style="max-width: 460px; margin: -20px auto 35px; position: relative;">
+        <input type="text" id="eco-search-input" class="form-control" placeholder="🔍 Search brands, channels, or websites..." style="padding-left: 20px; border-radius: 999px; background: rgba(14, 22, 42, 0.9);" />
+      </div>
+
+      <!-- Ecosystem Cards Grid -->
+      <div class="eco-grid" id="eco-cards-grid">
+
+        <!-- 1. WEBSITES (6 Items) -->
+        <div class="glass-panel eco-card" data-category="website">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-web"><i class="fa-solid fa-building-columns"></i></div>
+            <span class="eco-category-tag">Official Website</span>
+          </div>
+          <h4 class="eco-brand-title">Myron Mall</h4>
+          <div class="eco-handle">myronmall.com</div>
+          <p class="eco-desc">₹2,500 Cr premier lifestyle destination, high-end retail leasing, entertainment zones & flagship dining.</p>
+          <a href="https://myronmall.com/" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>Explore Website</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="website">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-web"><i class="fa-solid fa-house-chimney"></i></div>
+            <span class="eco-category-tag">Official Website</span>
+          </div>
+          <h4 class="eco-brand-title">Myron Homes</h4>
+          <div class="eco-handle">myronhomes.in</div>
+          <p class="eco-desc">Luxury residential gated communities, premium villas, smart apartments, and commercial ventures.</p>
+          <a href="https://www.myronhomes.in/" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>Explore Website</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="website">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-web"><i class="fa-solid fa-hotel"></i></div>
+            <span class="eco-category-tag">Official Website</span>
+          </div>
+          <h4 class="eco-brand-title">Hotel Vishnu Sri</h4>
+          <div class="eco-handle">hotelvishnusri.com</div>
+          <p class="eco-desc">Luxury hospitality, executive suites, multi-cuisine dining, and banquet celebration spaces.</p>
+          <a href="https://www.hotelvishnusri.com/" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>Explore Website</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="website">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-web"><i class="fa-solid fa-trowel-bricks"></i></div>
+            <span class="eco-category-tag">Official Website</span>
+          </div>
+          <h4 class="eco-brand-title">Uday Infra</h4>
+          <div class="eco-handle">udayinfra.in</div>
+          <p class="eco-desc">State-of-the-art infrastructure development, civil engineering, and modern urban planning.</p>
+          <a href="https://udayinfra.in/" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>Explore Website</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="website">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-web"><i class="fa-solid fa-cubes"></i></div>
+            <span class="eco-category-tag">Official Website</span>
+          </div>
+          <h4 class="eco-brand-title">Mirchi Developers</h4>
+          <div class="eco-handle">mirchidevelopers.com</div>
+          <p class="eco-desc">Leading real estate development company delivering open plots, gated communities, and farm villas.</p>
+          <a href="https://mirchidevelopers.com/" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>Explore Website</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="website">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-web"><i class="fa-solid fa-crown"></i></div>
+            <span class="eco-category-tag">Official Website</span>
+          </div>
+          <h4 class="eco-brand-title">Royal City Developer</h4>
+          <div class="eco-handle">royalcitydeveloper.in</div>
+          <p class="eco-desc">Premium mega-townships, luxury layouts, and high-yield real estate investment opportunities.</p>
+          <a href="https://royalcitydeveloper.in/index.html" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>Explore Website</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- 2. INSTAGRAM CHANNELS (12 Items) -->
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">Myron Mall Official</h4>
+          <div class="eco-handle">@myron_mall_official</div>
+          <p class="eco-desc">The official lifestyle, event, and retail hub of Myron Mall. Updates, offers & star events.</p>
+          <a href="https://www.instagram.com/myron_mall_official/" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">Myron Homes Official</h4>
+          <div class="eco-handle">@myronhomes_official</div>
+          <p class="eco-desc">Showcasing architectural excellence, luxury villa walkthroughs, and buyer testimonials.</p>
+          <a href="https://www.instagram.com/myronhomes_official/" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">Myron Connects</h4>
+          <div class="eco-handle">@myronconnects</div>
+          <p class="eco-desc">Customer relations, community stories, corporate initiatives, and partnership announcements.</p>
+          <a href="https://www.instagram.com/myronconnects/" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">Royal City Developers</h4>
+          <div class="eco-handle">@royalcity.developers</div>
+          <p class="eco-desc">Mega real estate layout launches, site progress updates, and property investment guidance.</p>
+          <a href="https://www.instagram.com/royalcity.developers/" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">Mirchi Developers</h4>
+          <div class="eco-handle">@mirchidevelopers</div>
+          <p class="eco-desc">High-growth plotting ventures, gated communities, and customer milestone celebrations.</p>
+          <a href="https://www.instagram.com/mirchidevelopers/?hl=en" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">Konaseema 143 Loves</h4>
+          <div class="eco-handle">@konaseema143loves</div>
+          <p class="eco-desc">Hyper-viral cultural media page spotlighting the beauty, festivities, and traditions of Konaseema.</p>
+          <a href="https://www.instagram.com/konaseema143loves/?hl=en" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">Hotel Vishnu Sri</h4>
+          <div class="eco-handle">@hotelvishnusri</div>
+          <p class="eco-desc">Gourmet culinary showcases, banquet hospitality, suite interiors, and festive offers.</p>
+          <a href="https://www.instagram.com/hotelvishnusri/?hl=en" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">Gramayatri Official</h4>
+          <div class="eco-handle">@gramayatri_official</div>
+          <p class="eco-desc">Eco-tourism rural travel community exploring scenic heritage villages, farm experiences, and festivals.</p>
+          <a href="https://www.instagram.com/gramayatri_official/?hl=en" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">Pretty Skin Aesthetic</h4>
+          <div class="eco-handle">@pretty_skin_aesthetic</div>
+          <p class="eco-desc">Advanced aesthetic dermatology, skin clinic treatments, and professional beauty care.</p>
+          <a href="https://www.instagram.com/pretty_skin_aesthetic/?hl=en" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">Pretty Women's Saloon</h4>
+          <div class="eco-handle">@pretty_womens_saloon</div>
+          <p class="eco-desc">Premium salon and bridal makeover studio offering luxury styling and hair care treatments.</p>
+          <a href="https://www.instagram.com/pretty_womens_saloon/?hl=en" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">ABCD Food Court</h4>
+          <div class="eco-handle">@abcd.food.court</div>
+          <p class="eco-desc">Vibrant multi-brand dining hub featuring fast food, regional delicacies, and cafe hangouts.</p>
+          <a href="https://www.instagram.com/abcd.food.court/?hl=en" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="instagram">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-insta"><i class="fa-brands fa-instagram"></i></div>
+            <span class="eco-category-tag">Instagram Official</span>
+          </div>
+          <h4 class="eco-brand-title">Official ATBPL</h4>
+          <div class="eco-handle">@official_atbpl</div>
+          <p class="eco-desc">Corporate infrastructure, transport, and logistics initiatives driving commercial connectivity.</p>
+          <a href="https://www.instagram.com/official_atbpl/?hl=en" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>View Instagram</span> <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <!-- 3. YOUTUBE CHANNELS (4 Items) -->
+        <div class="glass-panel eco-card" data-category="youtube">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-yt"><i class="fa-brands fa-youtube"></i></div>
+            <span class="eco-category-tag">YouTube Official</span>
+          </div>
+          <h4 class="eco-brand-title">MyRon Homes Official</h4>
+          <div class="eco-handle">@MyRonHomesOfficial</div>
+          <p class="eco-desc">Architectural video tours, customer possession celebrations, and real estate insights.</p>
+          <a href="https://www.youtube.com/@MyRonHomesOfficial" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>Visit Channel</span> <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="youtube">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-yt"><i class="fa-brands fa-youtube"></i></div>
+            <span class="eco-category-tag">YouTube Official</span>
+          </div>
+          <h4 class="eco-brand-title">Myron Mall</h4>
+          <div class="eco-handle">@MyronMall</div>
+          <p class="eco-desc">Event recaps, musical launches, celebrity appearances, and promotional brand films.</p>
+          <a href="https://www.youtube.com/@MyronMall" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>Visit Channel</span> <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="youtube">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-yt"><i class="fa-brands fa-youtube"></i></div>
+            <span class="eco-category-tag">YouTube Official</span>
+          </div>
+          <h4 class="eco-brand-title">Mirchi Developers</h4>
+          <div class="eco-handle">@MirchiDevelopers</div>
+          <p class="eco-desc">Project walkthroughs, drone views, layout developments, and investor masterclasses.</p>
+          <a href="https://www.youtube.com/@MirchiDevelopers" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>Visit Channel</span> <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+
+        <div class="glass-panel eco-card" data-category="youtube">
+          <div class="eco-card-top">
+            <div class="eco-brand-badge badge-yt"><i class="fa-brands fa-youtube"></i></div>
+            <span class="eco-category-tag">YouTube Official</span>
+          </div>
+          <h4 class="eco-brand-title">ABCD Food Court</h4>
+          <div class="eco-handle">@ABCDFoodCourt</div>
+          <p class="eco-desc">Culinary delights, chef specials, food challenges, and festive crowd gatherings.</p>
+          <a href="https://www.youtube.com/@ABCDFoodCourt" target="_blank" rel="noopener noreferrer" class="eco-link-btn">
+            <span>Visit Channel</span> <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PHILOSOPHY & GROWTH FORMULA BANNER
+       ========================================================================== -->
+  <div class="container">
+    <div class="philosophy-banner">
+      <p class="philosophy-quote">
+        “Advertising is not about how much you spend — it is about how much business and profit that investment generates.”
+      </p>
+      <div class="philosophy-formula">
+        <span class="formula-step">CREATE</span>
+        <span class="formula-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        <span class="formula-step">PROMOTE</span>
+        <span class="formula-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        <span class="formula-step">GENERATE LEADS</span>
+        <span class="formula-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        <span class="formula-step">OPTIMIZE</span>
+        <span class="formula-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        <span class="formula-step">CONVERT</span>
+        <span class="formula-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        <span class="formula-step" style="background:var(--gold-gradient); color:#04060d; font-weight:800;">SCALE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PROFESSIONAL EXPERIENCE TIMELINE
+       ========================================================================== -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <div class="text-center mx-auto">
+        <div class="section-tag"><i class="fa-solid fa-briefcase"></i> Career Track</div>
+        <h2 class="section-title">PROFESSIONAL <span class="text-gradient-gold">JOURNEY</span></h2>
+        <p class="section-subtitle mx-auto">
+          6 years of continuous performance leadership turning multi-lakh advertising investments into exponential real estate sales and mega brand launches.
+        </p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-spine"></div>
+
+        <!-- 1. My Digital Housing (Myron Homes & Mall) -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="glass-panel timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-company">My Digital Housing (Client: Myron Homes & Myron Mall)</h3>
+                <div class="timeline-role">Manager & Team Lead</div>
+              </div>
+              <span class="timeline-period">20/06/2026 — Present</span>
+            </div>
+            <ul class="timeline-bullet-list">
+              <li>Lead end-to-end performance marketing for high-value real estate & mega commercial projects.</li>
+              <li>Managing high-yield campaigns across Meta Ads, Google Ads, LinkedIn Ads, OTT (JioHotstar, Amazon Prime, Netflix), and Generative AI marketing tools.</li>
+              <li><strong>₹20L+ Monthly Ad Investment → ₹900Cr Business Revenue Influenced in 2 Months.</strong></li>
+              <li>Orchestrating growth and stage events for the flagship <strong>₹2,500Cr Myron Mall</strong> project.</li>
+              <li>Collaborating with sales, CRM, and executive business teams to bridge lead volume into on-ground site visits and final sale closures.</li>
+            </ul>
+            <div class="timeline-impact-pill">
+              <i class="fa-solid fa-trophy" style="color:var(--gold-primary);"></i> ₹900 Cr Influenced · ₹2,500 Cr Project Scale · Event Host
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Samooha Projects -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="glass-panel timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-company">Samooha Projects (Real Estate)</h3>
+                <div class="timeline-role">Digital Marketing Manager & Ads Specialist</div>
+              </div>
+              <span class="timeline-period">2025 Feb — 2026 May</span>
+            </div>
+            <ul class="timeline-bullet-list">
+              <li>Executed comprehensive lead generation campaigns for apartments, luxury villas, and commercial real estate.</li>
+              <li>Optimized Cost Per Lead (CPL) and Return on Ad Spend (ROAS) through advanced audience segmentation, lookalikes, and dynamic retargeting.</li>
+              <li>Spearheaded creative testing, hooks, CTAs, and video ad formats that consistently multiplied conversion rates.</li>
+              <li>Supervised marketing squads and reported ROI analytics directly to executive directors.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. Asian Digital World Pvt. Ltd -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="glass-panel timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-company">Asian Digital World Pvt. Ltd</h3>
+                <div class="timeline-role">Digital Marketing Manager, Team Lead & Head of Marketing</div>
+              </div>
+              <span class="timeline-period">2023 Jan — 2025 Feb</span>
+            </div>
+            <ul class="timeline-bullet-list">
+              <li>Managed 360° digital marketing campaigns for diverse clients across Real Estate, Education, Retail, Tourism, and Startups.</li>
+              <li>Planned and deployed Meta Ads and Google Ads driving massive lead volumes and national brand visibility.</li>
+              <li>Built comprehensive SEO strategies elevating organic rank and web traffic across major commercial client portals.</li>
+              <li>Led multi-disciplinary teams of graphic designers, video editors, copywriters, and performance media buyers.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. Mirchi Developers -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="glass-panel timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-company">Mirchi Developers (Real Estate Company)</h3>
+                <div class="timeline-role">Digital Marketing Executive</div>
+              </div>
+              <span class="timeline-period">2021 Jan — 2022 Dec</span>
+            </div>
+            <ul class="timeline-bullet-list">
+              <li>Managed targeted Facebook & Instagram ad campaigns focused on high-intent real estate property buyers.</li>
+              <li>Designed launch campaigns and promotional events for new layout open plots and gated townships.</li>
+              <li>Coordinated closely with on-ground sales teams to shorten sales cycles and boost inquiry-to-booking conversions.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS & AI MARKETING MATRIX
+       ========================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="text-center mx-auto">
+        <div class="section-tag"><i class="fa-solid fa-microchip"></i> Capabilities</div>
+        <h2 class="section-title">CORE SKILLS & <span class="text-gradient-cyan">AI MASTERY</span></h2>
+        <p class="section-subtitle mx-auto">
+          Combining deep performance marketing analytics with next-generation AI advertising and live stage presence.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Performance Marketing & Growth -->
+        <div class="glass-panel skill-category-card">
+          <h3 class="skill-cat-title"><i class="fa-solid fa-chart-pie"></i> Performance & Growth</h3>
+          <div class="skill-tags-cloud">
+            <span class="skill-tag skill-tag-highlight">Meta Ads (FB & Insta)</span>
+            <span class="skill-tag skill-tag-highlight">Google Ads & PPC</span>
+            <span class="skill-tag">LinkedIn Ads</span>
+            <span class="skill-tag">Lead Generation Mastery</span>
+            <span class="skill-tag">Conversion Rate Optimization (CRO)</span>
+            <span class="skill-tag skill-tag-highlight">ROI & ROAS Scaling</span>
+            <span class="skill-tag">Real Estate Performance Marketing</span>
+            <span class="skill-tag">Funnel Architecture</span>
+          </div>
+        </div>
+
+        <!-- OTT & Programmatic Advertising -->
+        <div class="glass-panel skill-category-card">
+          <h3 class="skill-cat-title"><i class="fa-solid fa-tv"></i> OTT & Modern Media</h3>
+          <div class="skill-tags-cloud">
+            <span class="skill-tag skill-tag-highlight">JioHotstar Advertising</span>
+            <span class="skill-tag skill-tag-highlight">Amazon Prime Video Ads</span>
+            <span class="skill-tag">Netflix Advertising</span>
+            <span class="skill-tag">YouTube TrueView Ads</span>
+            <span class="skill-tag">Programmatic Display</span>
+            <span class="skill-tag">Connected TV (CTV) Ads</span>
+            <span class="skill-tag">High-Impact Video Hooks</span>
+          </div>
+        </div>
+
+        <!-- AI Advertising & Generative Marketing -->
+        <div class="glass-panel skill-category-card">
+          <h3 class="skill-cat-title"><i class="fa-solid fa-brain"></i> AI & Generative Ads</h3>
+          <div class="skill-tags-cloud">
+            <span class="skill-tag skill-tag-highlight">ChatGPT Ads & Prompts</span>
+            <span class="skill-tag skill-tag-highlight">Generative AI for Marketing</span>
+            <span class="skill-tag">AI Audience Predictor</span>
+            <span class="skill-tag">Automated Copy & Hook Testing</span>
+            <span class="skill-tag">AI Video Generation</span>
+            <span class="skill-tag">Predictive LTV Modeling</span>
+          </div>
+        </div>
+
+        <!-- Event Hosting & Leadership -->
+        <div class="glass-panel skill-category-card">
+          <h3 class="skill-cat-title"><i class="fa-solid fa-microphone-lines"></i> Event Conducting & Leadership</h3>
+          <div class="skill-tags-cloud">
+            <span class="skill-tag skill-tag-highlight">Mega Mall Launch Hosting</span>
+            <span class="skill-tag skill-tag-highlight">Stage Anchoring & MC</span>
+            <span class="skill-tag">VIP & Dignitary Protocol</span>
+            <span class="skill-tag">Cultural Tourism Expeditions</span>
+            <span class="skill-tag">Team Leadership & Direction</span>
+            <span class="skill-tag">Cross-functional Sales Sync</span>
+          </div>
+        </div>
+
+        <!-- Tools & Analytics Platforms -->
+        <div class="glass-panel skill-category-card" style="grid-column: 1 / -1;">
+          <h3 class="skill-cat-title"><i class="fa-solid fa-screwdriver-wrench"></i> Platforms & Technical Arsenal</h3>
+          <div class="skill-tags-cloud">
+            <span class="skill-tag skill-tag-highlight"><i class="fa-brands fa-meta"></i> Meta Ads Manager & Business Suite</span>
+            <span class="skill-tag skill-tag-highlight"><i class="fa-brands fa-google"></i> Google Ads & Keyword Planner</span>
+            <span class="skill-tag"><i class="fa-solid fa-chart-simple"></i> Google Analytics 4 (GA4)</span>
+            <span class="skill-tag"><i class="fa-brands fa-searchengin"></i> Google Search Console</span>
+            <span class="skill-tag"><i class="fa-brands fa-hubspot"></i> HubSpot CRM</span>
+            <span class="skill-tag"><i class="fa-solid fa-magnifying-glass-chart"></i> SEMrush & Ahrefs</span>
+            <span class="skill-tag"><i class="fa-brands fa-wordpress"></i> WordPress</span>
+            <span class="skill-tag"><i class="fa-solid fa-palette"></i> Canva Pro</span>
+            <span class="skill-tag"><i class="fa-solid fa-scissors"></i> CapCut & Video Editing Suites</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE ROI & REVENUE SCALING CALCULATOR
+       ========================================================================== -->
+  <section class="calculator-section" id="calculator">
+    <div class="container">
+      <div class="text-center mx-auto">
+        <div class="section-tag"><i class="fa-solid fa-calculator"></i> Impact Visualizer</div>
+        <h2 class="section-title">CAMPAIGN ROI & <span class="text-gradient-gold">REVENUE CALCULATOR</span></h2>
+        <p class="section-subtitle mx-auto">
+          Slide your proposed monthly ad budget to estimate high-intent leads, footfalls, and project revenue influence based on Satish's acquisition formula.
+        </p>
+      </div>
+
+      <div class="glass-panel calculator-card">
+        <div class="calc-grid">
+          <div>
+            <div class="calc-slider-group">
+              <div class="calc-slider-label">
+                <span>Monthly Advertising Budget</span>
+                <span id="budget-val-display" class="calc-slider-value">₹20.0 Lakhs / Month</span>
+              </div>
+              <input type="range" min="2" max="50" step="1" value="20" class="custom-slider" id="budget-slider" aria-label="Monthly Ad Budget Slider" />
+              <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-muted); margin-top:8px;">
+                <span>₹2 Lakhs</span>
+                <span>₹20 Lakhs (Benchmark)</span>
+                <span>₹50 Lakhs</span>
+              </div>
+            </div>
+
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+              Based on empirical data achieved at Myron Mall and luxury real estate campaigns:
+              <br><strong style="color:#fff;">₹20L Ad Spend → ₹900 Cr Business Revenue Influenced in 60 Days.</strong>
+            </p>
+          </div>
+
+          <div class="calc-results-panel">
+            <div class="calc-result-row">
+              <span class="calc-label"><i class="fa-solid fa-eye" style="color:var(--cyan-primary);"></i> Targeted High-Intent Impressions</span>
+              <span class="calc-metric" id="calc-impressions">3.7M+</span>
+            </div>
+            <div class="calc-result-row">
+              <span class="calc-label"><i class="fa-solid fa-user-check" style="color:var(--gold-primary);"></i> Verified Inquiries & Leads</span>
+              <span class="calc-metric text-gradient-gold" id="calc-leads">2,200+</span>
+            </div>
+            <div class="calc-result-row">
+              <span class="calc-label"><i class="fa-solid fa-car" style="color:var(--violet-primary);"></i> Projected Site Visits / Footfalls</span>
+              <span class="calc-metric" id="calc-visits">616+ Qualified</span>
+            </div>
+            <div class="calc-result-row">
+              <span class="calc-label"><i class="fa-solid fa-sack-dollar" style="color:#10b981;"></i> Project Pipeline Value Influenced</span>
+              <span class="calc-metric-highlight" id="calc-pipeline">₹900 Crores+</span>
+            </div>
+            <div class="calc-result-row">
+              <span class="calc-label"><i class="fa-solid fa-chart-line"></i> Estimated Direct Sales Impact</span>
+              <span class="calc-metric" id="calc-revenue" style="color:var(--gold-light);">₹150 Cr+ Estimated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EDUCATION, CREDENTIALS & LANGUAGES
+       ========================================================================== -->
+  <section class="credentials-section">
+    <div class="container">
+      <div class="text-center mx-auto">
+        <div class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic & Honors</div>
+        <h2 class="section-title">CREDENTIALS & <span class="text-gradient-gold">EDUCATION</span></h2>
+      </div>
+
+      <div class="cred-grid">
+        <div class="glass-panel cred-card">
+          <div class="cred-icon"><i class="fa-solid fa-award"></i></div>
+          <h4 class="cred-title">Digital Marketing Project Manager</h4>
+          <div class="cred-score">Certified Specialist</div>
+          <p class="cred-desc">Advanced project management, multi-platform media strategy, and executive digital transformation.</p>
+        </div>
+
+        <div class="glass-panel cred-card">
+          <div class="cred-icon"><i class="fa-solid fa-certificate"></i></div>
+          <h4 class="cred-title">Diploma in Elementary Education (DELED)</h4>
+          <div class="cred-score">Degree: 95% Distinction</div>
+          <p class="cred-desc">Deep grounding in communication pedagogy, audience psychology, and structured public presentation.</p>
+        </div>
+
+        <div class="glass-panel cred-card">
+          <div class="cred-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h4 class="cred-title">Bachelor of Arts (BA)</h4>
+          <div class="cred-score">Score: 75% First Class</div>
+          <p class="cred-desc">Comprehensive foundation in humanities, social dynamics, communication, and linguistic analysis.</p>
+        </div>
+
+        <div class="glass-panel cred-card">
+          <div class="cred-icon"><i class="fa-solid fa-language"></i></div>
+          <h4 class="cred-title">Languages & Communication</h4>
+          <div class="cred-score">English & Telugu</div>
+          <p class="cred-desc">English (Professional Working Proficiency) · Telugu (Native Mastery). Natural bilingual stage orator.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VIP CONTACT & BOOKING HUB
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="text-center mx-auto">
+        <div class="section-tag"><i class="fa-solid fa-paper-plane"></i> Direct Connection</div>
+        <h2 class="section-title">CONNECT WITH <span class="text-gradient-gold">P. SATISH CHANDRA</span></h2>
+        <p class="section-subtitle mx-auto">
+          Ready to conduct your mega launch event, scale your real estate portfolio, or orchestrate high-yield advertising? Reach out directly.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Channels Card -->
+        <div class="glass-panel contact-info-card">
+          <div>
+            <h3 style="font-family:var(--font-heading); font-size:1.6rem; color:#fff; margin-bottom:10px;">Direct Channels</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6;">
+              Open to high-impact managerial roles, project marketing contracts, and flagship event conductor bookings across India and internationally.
+            </p>
+
+            <div class="contact-channels-list">
+              <a href="tel:+918464960327" class="contact-channel-item">
+                <div class="contact-channel-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-channel-info">
+                  <span class="channel-label">Direct Phone Call</span>
+                  <span class="channel-val">+91 8464960327</span>
+                </div>
+              </a>
+
+              <a href="mailto:Peyyalasatish3@gmail.com" class="contact-channel-item">
+                <div class="contact-channel-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-channel-info">
+                  <span class="channel-label">Email Inquiries</span>
+                  <span class="channel-val">Peyyalasatish3@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://wa.me/918464960327" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <div class="contact-channel-icon" style="background:rgba(37, 211, 102, 0.18); color:#25D366;"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="contact-channel-info">
+                  <span class="channel-label">Instant WhatsApp Chat</span>
+                  <span class="channel-val">+91 8464960327 (Quick Response)</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/peyyala-satish-chandra-41799422a/" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <div class="contact-channel-icon" style="background:rgba(0, 119, 181, 0.18); color:#0077b5;"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="contact-channel-info">
+                  <span class="channel-label">LinkedIn Profile</span>
+                  <span class="channel-val">peyyala-satish-chandra</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div style="font-family:var(--font-tech); font-size:0.85rem; color:var(--gold-light);">
+            📍 Location: India | Open to Relocate Worldwide
+          </div>
+        </div>
+
+        <!-- VIP Booking & Inquiry Form -->
+        <div class="glass-panel contact-form-card">
+          <h3 style="font-family:var(--font-heading); font-size:1.45rem; color:#fff; margin-bottom:8px;">Schedule or Book Consultation</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:24px;">
+            Fill out the form below to initiate an executive consultation or book Satish Chandra as an event host.
+          </p>
+
+          <form id="vip-contact-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name / Organization *</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="e.g. Myron Group / Royal Developers" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-phone" class="form-label">Phone Number *</label>
+              <input type="tel" id="contact-phone" class="form-control" placeholder="+91 XXXXX XXXXX" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-service" class="form-label">Primary Engagement Interest</label>
+              <select id="contact-service" class="form-control form-select">
+                <option value="Conduct Mega Event / Stage Host">Conduct Mega Event / Stage Host</option>
+                <option value="Performance Marketing (₹20L+ Mo. Ad Spend)">Performance Marketing (₹20L+ Mo. Ad Spend)</option>
+                <option value="Full Digital Marketing Management">Full Digital Marketing Management & Team Lead</option>
+                <option value="Real Estate Project Launch Strategy">Real Estate Project Launch Strategy</option>
+                <option value="AI-Powered Campaign Scaling">AI-Powered Campaign Scaling & OTT Ads</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-notes" class="form-label">Project Details or Requirements</label>
+              <textarea id="contact-notes" class="form-control" placeholder="Briefly describe your project, event date, or budget scale..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Send Booking Request via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CINEMA VIDEO & REEL MODAL
+       ========================================================================== -->
+  <div class="cinema-modal" id="cinema-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog-box">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Event Showcase</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-media-frame" id="modal-media-frame">
+        <!-- Dynamic Iframe / Media Inserted Here -->
+      </div>
+      <div class="modal-footer">
+        <span class="modal-desc" id="modal-desc">Event Details</span>
+        <a href="#" id="modal-direct-link" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="font-size:0.85rem; padding:8px 18px;">
+          Open in New Tab <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast-notification"></div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="luxury-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="brand-logo">
+          <div class="brand-crest">SC</div>
+          <div class="brand-text">
+            <span class="brand-name">P. SATISH CHANDRA</span>
+            <span class="brand-title">Manager at Myron Mall · Event Host · Performance Marketer</span>
+          </div>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/peyyala-satish-chandra-41799422a/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/myron_mall_official/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Myron Mall Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@MyronMall" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Myron Mall YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://wa.me/918464960327" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:Peyyalasatish3@gmail.com" class="footer-social-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 P. Satish Chandra. All Rights Reserved. Luxury 3D Portfolio & Event Showcase.
+        </div>
+        <div>
+          Engineered with Three.js, Modern CSS & AI Performance Architecture.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Engine -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
