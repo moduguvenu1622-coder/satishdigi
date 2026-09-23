@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initNavbarScroll();
   initMobileMenu();
+  initScrollProgress();
+  initLuxuryReveal();
 });
 
 /* ==========================================================================
@@ -23,15 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
    ========================================================================== */
 function initLuxuryCompanion3D() {
   const container = document.getElementById('webgl-canvas-container');
-  if (!container || typeof THREE === 'undefined') return;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!container || typeof THREE === 'undefined' || reduceMotion) return;
 
+  const isCompactDevice = window.matchMedia('(max-width: 768px)').matches;
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.z = 42;
 
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, isCompactDevice ? 1.35 : 2));
   container.innerHTML = '';
   container.appendChild(renderer.domElement);
 
@@ -54,7 +58,7 @@ function initLuxuryCompanion3D() {
   }
 
   // Small, delicate micro-dot particles ("dots particles style, not much, small small sizes")
-  const sparkCount = 85; // Sparse, elegant count
+  const sparkCount = isCompactDevice ? 34 : 85; // Lighter particle field on mobile for smoother scrolling
   const geometry = new THREE.BufferGeometry();
   const positions = new Float32Array(sparkCount * 3);
   const colors = new Float32Array(sparkCount * 3);
@@ -153,6 +157,9 @@ function initLuxuryCompanion3D() {
    2. REFINED SUBTLE CURSOR SPOTLIGHT TRACKING
    ========================================================================== */
 function initCursorSpotlight() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   window.addEventListener('mousemove', (e) => {
     document.documentElement.style.setProperty('--cursor-x', `${e.clientX}px`);
     document.documentElement.style.setProperty('--cursor-y', `${e.clientY}px`);
@@ -163,6 +170,9 @@ function initCursorSpotlight() {
    3. INTERACTIVE 3D CARD TILT WITH SPECULAR REFLECTION
    ========================================================================== */
 function init3DCardTilt() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   const tiltCards = document.querySelectorAll('.card-3d-wrapper, .event-card, .metric-card, .timeline-card, .calculator-card');
 
   tiltCards.forEach(card => {
@@ -199,12 +209,12 @@ function initDynamicTyping() {
   if (!typingElement) return;
 
   const roles = [
-    "Manager at Myron Mall & Flagship Event Conductor",
-    "Influenced ₹900 Cr+ Revenue in 2 Months",
-    "Architect of ₹2,500 Cr Myron Mall Brand Launch",
+    "Digital Marketing Manager | Team Lead",
+    "Revenue Generated ₹1500 Cr+ in 6 Years",
+    "From High-Intent Audiences to High-Value Conversions",
     "Meta, Google, OTT & JioHotstar Performance Lead",
     "AI-Driven Marketing & ChatGPT Advertising Specialist",
-    "Gramayatri Cultural Tour Organizer & Host"
+    "Gramayatri Cultural Tour Organizer & Myron Mall Host"
   ];
 
   let roleIndex = 0;
@@ -584,15 +594,41 @@ function showToast(title, msg) {
    ========================================================================== */
 function initNavbarScroll() {
   const header = document.querySelector('.header-nav');
+  const navLinks = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
+  const sections = navLinks
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
   if (!header) return;
 
+  const updateHeader = () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+
+    const marker = window.scrollY + Math.min(window.innerHeight * 0.36, 260);
+    let currentId = '';
+    sections.forEach(section => {
+      if (section.offsetTop <= marker) currentId = section.id;
+    });
+
+    navLinks.forEach(link => {
+      const isActive = currentId && link.getAttribute('href') === `#${currentId}`;
+      link.classList.toggle('active', Boolean(isActive));
+      if (isActive) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      updateHeader();
+      ticking = false;
+    });
   }, { passive: true });
+
+  updateHeader();
 }
 
 /* ==========================================================================
@@ -601,19 +637,120 @@ function initNavbarScroll() {
 function initMobileMenu() {
   const toggle = document.querySelector('.mobile-toggle');
   const links = document.querySelector('.nav-links');
+  const backdrop = document.getElementById('nav-backdrop');
 
   if (!toggle || !links) return;
 
+  const setMenuState = (open) => {
+    links.classList.toggle('nav-open', open);
+    backdrop?.classList.toggle('active', open);
+    document.body.classList.toggle('menu-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close Navigation Menu' : 'Open Navigation Menu');
+    toggle.innerHTML = open
+      ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+      : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+  };
+
   toggle.addEventListener('click', () => {
-    links.classList.toggle('nav-open');
-    const isOpen = links.classList.contains('nav-open');
-    toggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    setMenuState(!links.classList.contains('nav-open'));
   });
 
-  links.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      links.classList.remove('nav-open');
-      toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-    });
+  backdrop?.addEventListener('click', () => setMenuState(false));
+
+  links.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setMenuState(false));
   });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && links.classList.contains('nav-open')) {
+      setMenuState(false);
+      toggle.focus();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1180 && links.classList.contains('nav-open')) {
+      setMenuState(false);
+    }
+  }, { passive: true });
+}
+
+/* ==========================================================================
+   13. PREMIUM SCROLL PROGRESS
+   ========================================================================== */
+function initScrollProgress() {
+  const progressBar = document.getElementById('luxury-scroll-progress-bar');
+  if (!progressBar) return;
+
+  const update = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
+    progressBar.style.transform = `scaleX(${progress})`;
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      update();
+      ticking = false;
+    });
+  }, { passive: true });
+
+  window.addEventListener('resize', update, { passive: true });
+  update();
+}
+
+/* ==========================================================================
+   14. CINEMATIC SECTION REVEALS
+   ========================================================================== */
+function initLuxuryReveal() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+
+  const targets = document.querySelectorAll([
+    '.section-tag',
+    '.section-title',
+    '.section-subtitle',
+    '.metric-card',
+    '.event-card',
+    '.eco-card',
+    '.timeline-card',
+    '.skill-card',
+    '.cred-card',
+    '.host-skill-item',
+    '.contact-info-card',
+    '.contact-form-card',
+    '.calculator-card',
+    '.philosophy-banner'
+  ].join(','));
+
+  targets.forEach((el, index) => {
+    el.classList.add('luxury-reveal');
+    el.style.setProperty('--reveal-delay', `${Math.min((index % 5) * 65, 260)}ms`);
+
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.96 && rect.bottom > 0) {
+      el.classList.add('is-visible');
+    }
+  });
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+
+  targets.forEach(el => {
+    if (!el.classList.contains('is-visible')) observer.observe(el);
+  });
+
+  // Safety fallback: content never remains hidden if an embedded browser throttles IntersectionObserver.
+  window.setTimeout(() => {
+    targets.forEach(el => el.classList.add('is-visible'));
+  }, 2600);
 }
